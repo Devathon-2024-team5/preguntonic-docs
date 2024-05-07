@@ -1,11 +1,9 @@
 site_name: Preguntonic
 nav:
   - Home: index.md
-  - Desarrollo: desarrollo.md
   - Arquitectura: arquitectura.md
-  - Diagramas: diagramas.md
-  - Base de datos: base-datos.md
   - Acuerdo Interfaces: acuerdo-interfaces.md
+  - ¿Cómo jugar?: como-jugar.md
 
 theme:
   name: mkdocs
