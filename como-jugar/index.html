@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Diagramas - Preguntonic</title>
+        <title>¿Cómo jugar? - Preguntonic</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -38,19 +38,13 @@
                                 <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../desarrollo.md" class="nav-link">Desarrollo</a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="../arquitectura/" class="nav-link">Arquitectura</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Diagramas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../base-datos/" class="nav-link">Base de datos</a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="../acuerdo-interfaces/" class="nav-link">Acuerdo Interfaces</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">¿Cómo jugar?</a>
                             </li>
                         </ul>
 
@@ -61,12 +55,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../arquitectura/" class="nav-link">
+                                <a rel="prev" href="../acuerdo-interfaces/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../base-datos/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -118,9 +112,29 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#diagramas" class="nav-link">Diagramas</a>
+            <li class="nav-item" data-bs-level="1"><a href="#como-jugar-a-preguntonic" class="nav-link">¿Cómo jugar a Preguntonic?</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#diagramas-de-secuencia" class="nav-link">Diagramas de secuencia</a>
+            <li class="nav-item" data-bs-level="2"><a href="#seleccion-de-personaje" class="nav-link">Selección de personaje</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#crear-una-partida" class="nav-link">Crear una partida</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#unirse-a-una-partida" class="nav-link">Unirse a una partida</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sala-de-espera" class="nav-link">Sala de espera</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#juego" class="nav-link">Juego</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ranking-final" class="nav-link">Ranking final</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -131,10 +145,59 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="diagramas">Diagramas</h1>
-<h2 id="diagramas-de-secuencia">Diagramas de secuencia</h2>
-<h3 id="crear-sala">Crear sala</h3>
-<p><img alt="Crear sala" src="../images/architecture/crearSala.png" /></p></div>
+<h1 id="como-jugar-a-preguntonic">¿Cómo jugar a Preguntonic?</h1>
+<h2 id="seleccion-de-personaje">Selección de personaje</h2>
+<p>Antes de empezar a jugar, debemos seleccionar nuestro personaje favorito y escribir nuestro nombre. Para ello, simplemente introducimos nuestro nombre y pulsamos en el personaje que más nos guste en la pantalla principal.</p>
+<div style="display: flex; justify-content: center;">
+    <div>
+        <img src="/images/screenshots/home.png" alt="home" width="150"/> ➡ <img src="/images/screenshots/personajes.png" alt="crear sala" width="150"/>
+    </div>
+</div>
+
+<p>Preguntonic tiene dos formas de unirse a una partida:
+- Creando una partida
+- Unirse a una partida existente</p>
+<h2 id="crear-una-partida">Crear una partida</h2>
+<p>Para crear una partida, simplemente debemos pulsar en el botón "Crear sala" en la pantalla principal.</p>
+<p>Una vez creada la sala, podremos configurarla a nuestro gusto. Podemos elegir el número de jugadores y el número de preguntas que se responderán en la partida.</p>
+<div style="display: flex; justify-content: center;">
+    <img src="/images/screenshots/configuracion.png" alt="configuracion" width="150"/>
+</div>
+
+<p>Cuando tengamos la configuración deseada, pulsamos de nuevo en "Crear sala" y se mostrará la <a href="#sala-de-espera">sala de espera</a>.</p>
+<h2 id="unirse-a-una-partida">Unirse a una partida</h2>
+<p>Antes de unirnos a una partida, debemos introducir nuestro nombre y elegir nuestro avatar favorito. A continuación, pulsamos en el botón "Unirse a sala" en la pantalla principal.</p>
+<div style="display: flex; justify-content: center;">
+    <img src="/images/screenshots/unirSala.png" alt="home" width="150"/>
+</div>
+
+<p>A continuación, introducimos el código de la sala a la que queremos unirnos y pulsamos en "Ingresar". Si la sala existe y tiene plazas libres, se mostrará la <a href="#sala-de-espera">sala de espera</a>.</p>
+<h2 id="sala-de-espera">Sala de espera</h2>
+<p>En la sala de espera, podremos ver a los jugadores que se han unido a la partida y esperar a que se unan más jugadores.</p>
+<div style="display: flex; justify-content: center;">
+    <img src="/images/screenshots/salaespera.png" alt="home" width="150"/>
+</div>
+
+<p>Aquí se mostrará el código de la sala, el número de jugadores que se han unido y el número de jugadores que faltan para empezar la partida.</p>
+<p>La partida comenzará cuando se unan todos los jugadores y todos estén listos para jugar (pulsando el botón "Listo").</p>
+<h2 id="juego">Juego</h2>
+<p>Una vez comience la partida, se mostrarán preguntas de diferentes categorías. Cada jugador deberá responder a las preguntas en un tiempo limitado y obtendrá puntos en función de la rapidez y la precisión de su respuesta. ¡El jugador con más puntos al final de la partida será el ganador!</p>
+<div style="display: flex; justify-content: center;">
+    <img src="/images/screenshots/pregunta.png" alt="home" width="150"/>
+</div>
+
+<p>Una vez respondida la pregunta, se esperará a que todos los jugadores hayan respondido para mostrar los resultados y pasar a la siguiente pregunta. Trás cada pregunta, se mostrará un ranking con la puntuación de los jugadores y la respuesta correcta.</p>
+<div style="display: flex; justify-content: center;">
+    <img src="/images/screenshots/resultados.png" alt="home" width="150"/>
+</div>
+
+<h2 id="ranking-final">Ranking final</h2>
+<p>Al final de la partida, se mostrará el ranking final con la puntuación de todos los jugadores. ¡El jugador con más puntos será el ganador de la partida!</p>
+<div style="display: flex; justify-content: center;">
+    <img src="/images/screenshots/podium.png" alt="home" width="550"/>
+</div>
+
+<p>¡Y eso es todo! ¡Ahora ya sabes cómo jugar a Preguntonic! ¿Estás listo para demostrar tus conocimientos y convertirte en el campeón de las preguntas? ¡Buena suerte! 🏆</p></div>
             </div>
         </div>
 

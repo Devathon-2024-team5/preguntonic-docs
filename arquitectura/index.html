@@ -38,19 +38,13 @@
                                 <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../desarrollo.md" class="nav-link">Desarrollo</a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="./" class="nav-link active" aria-current="page">Arquitectura</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../diagramas/" class="nav-link">Diagramas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../base-datos/" class="nav-link">Base de datos</a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="../acuerdo-interfaces/" class="nav-link">Acuerdo Interfaces</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../como-jugar/" class="nav-link">¿Cómo jugar?</a>
                             </li>
                         </ul>
 
@@ -66,7 +60,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../diagramas/" class="nav-link">
+                                <a rel="next" href="../acuerdo-interfaces/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -117,12 +111,36 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#arquitectura" class="nav-link">Arquitectura</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#diagrama-de-base-de-datos" class="nav-link">Diagrama de base de datos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#diagramas-de-secuencia" class="nav-link">Diagramas de secuencia</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="arquitectura">Arquitectura</h1>
+<h2 id="diagrama-de-base-de-datos">Diagrama de base de datos</h2>
+<p><img alt="Base de datos" src="../images/architecture/db.png" /></p>
+<h2 id="diagramas-de-secuencia">Diagramas de secuencia</h2>
+<h3 id="crear-sala-api-rest">Crear sala (API REST)</h3>
+<p><img alt="Crear sala" src="../images/architecture/ds-crearSala.png" /></p>
+<h3 id="unirse-a-sala-api-rest">Unirse a sala (API REST)</h3>
+<p><img alt="Unirse a sala" src="../images/architecture/ds-unirseSala.png" /></p>
+<h3 id="sala-de-espera-web-socket">Sala de espera (Web Socket)</h3>
+<p><img alt="Sala de espera" src="../images/architecture/ds-salaEspera.png" /></p>
+<h3 id="juego-y-resultados-web-socket">Juego y resultados (Web Socket)</h3>
+<p><img alt="Juego y resultados" src="../images/architecture/ds-juegoResultados.png" /></p></div>
             </div>
         </div>
 
