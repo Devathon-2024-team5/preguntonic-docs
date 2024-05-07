@@ -1,0 +1,77 @@
+@startuml BBDD
+!theme sketchy-outline
+
+!define primary_key(x) <b><color:#b8861b><&key></color> x</b>
+!define foreign_key(x) <color:#aaaaaa><&key></color> x
+!define column(x) <color:#efefef><&media-record></color> x
+!define table(x) entity x << (T, white) >> #dae8fc
+
+' tables/entitites
+table( room ) {
+  primary_key( id ): UUID
+  column( isActive ): BOOLEAN 
+  column( date ): DATE
+  column( timePerQuestionSeg ): INTEGER
+}
+
+table( game ) {
+  primary_key( id ): UUID
+  foreign_key( roomId ): UUID <<FK>> 
+}
+
+table( question ) {  
+  primary_key( id ): UUID 
+  foreign_key( tagId ): UUID <<FK>>
+  column( title ): VARCHAR 
+  column( description ): VARCHAR
+}
+
+table( tag ) {
+  primary_key( id ): UUID 
+  column( name ): VARCHAR 
+}
+
+table( option ) {
+    foreign_key( questionId ): UUID <<FK>>
+    foreign_key( answerId ): UUID <<FK>>
+    column( isCorrect ): BOOLEAN
+}
+
+table( answer ) {
+  primary_key( id ): UUID 
+  column( description ): VARCHAR 
+}
+
+table( user ) {
+  primary_key( id ): UUID
+  foreign_key( roleId ): UUID <<FK>> 
+  column( name ): VARCHAR 
+  column( nickName ): VARCHAR 
+  column( email ): VARCHAR 
+  column( password ): VARCHAR 
+}
+
+table( score ) {
+  primary_key( id ): UUID
+  foreign_key( gameId ): UUID <<FK>> 
+  foreign_key( userId ): UUID <<FK>>
+  column( score ): INTEGER 
+}
+
+table( role ) {
+  primary_key( id ): UUID
+  column( role ): VARCHAR 
+}
+
+
+' Relationships
+room ||-down-o{ game
+room ||-down-{ user
+question ||--{ option
+question }o--|| tag
+question }--right--{ game
+option }--|| answer
+game ||--{ score
+score }-right-|| user
+user }o--|| role
+@enduml

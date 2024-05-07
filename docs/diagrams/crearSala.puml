@@ -1,0 +1,26 @@
+@startuml Create Room
+!theme sketchy-outline
+
+title Crear sala
+actor User #LightBlue
+participant FrontEnd #LightGray
+participant Server #LightGray
+
+User -> FrontEnd: Pulsa el boton de "Crear sala"
+FrontEnd -> User: Muestra formulario
+
+User -> FrontEnd: Rellena el formulario, \n con los campos "max_players", "num_questions"
+
+FrontEnd -> Server: Crear sala\n **POST** v1/rooms\n {max_players, num_questions}
+Server -> Server: Crea la sala con los parametros dados
+Server -> FrontEnd: Devuelve el id de la sala creada\n **200 OK**\n {room_code}
+
+FrontEnd -> Server: Unir Sala\n **POST** v1/rooms/{room_code} \n {user_name, avatar}
+Server -> Server: Crea el jugador y lo une a la sala
+Server -> FrontEnd: Devuelve el id de la sala\n **200 OK**\n {player_id, user_name, avatar}
+
+
+FrontEnd -> User: Muestra (redirigue) a la interfaz de lobby\n con el id de la sala
+
+
+@endumlc

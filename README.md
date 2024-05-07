@@ -1,4 +1,10 @@
-# Welcome to your organization's demo respository
-This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
+# Preguntonic documentación
 
-The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
+## Introducción
+
+Preguntonic es un juego de preguntas y respuestas que se juega en tiempo real. 
+Los jugadores compiten entre sí para responder correctamente a las preguntas y ganar puntos. 
+
+El juego se desarrolla en rondas, cada una con una pregunta. 
+Al final de cada ronda, el jugador con más puntos gana.
+
